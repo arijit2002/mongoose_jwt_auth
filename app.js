@@ -1,13 +1,14 @@
-require("dotenv").config();
-require("./config/database").connect();
 const express = require("express");
+const app = express();
+require("dotenv").config();
+require("./config/database")
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const User = require("./model/user");
 const auth = require("./middleware/auth");
 const port = process.env.PORT || 3333;
-const app = express();
+
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json({ limit: "50mb" }));
