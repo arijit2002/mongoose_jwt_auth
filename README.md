@@ -1,2 +1,2 @@
 
-JWT auth 
+JWT authentication
